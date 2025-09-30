@@ -12,6 +12,15 @@ class Vendor:
             self.inventory.remove(item)
             return item
         return False
+#wave 2
+    
+    def get_by_id(self, id):
+        for item in self.inventory:
+            if item.id == id:
+                return item
+        else:
+            return None
+
 
 #wave 3
     def swap_items(self,other_vendor, my_item, their_item):
