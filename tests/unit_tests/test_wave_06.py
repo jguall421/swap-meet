@@ -305,7 +305,7 @@ def test_swap_best_by_category_no_other_match_is_false():
     assert item_b in tai.inventory
     assert item_c in tai.inventory
     assert item_d in jesse.inventory
-    assert item_e in jesse.inventorygit
+    assert item_e in jesse.inventory
     assert item_f in jesse.inventory
 
     # raise Exception("Complete this test according to comments below.")

@@ -14,8 +14,9 @@ class Vendor:
             self.inventory.remove(item)
             return item
         return False
-#wave 2
     
+
+#wave 2
     def get_by_id(self, id):
         for item in self.inventory:
             if item.id == id:
@@ -36,8 +37,8 @@ class Vendor:
 
         return True   
     
-#wave 4
 
+#wave 4
     def swap_first_item(self, other_vendor):
         if not self.inventory or not other_vendor.inventory:
             return False
@@ -50,10 +51,6 @@ class Vendor:
         return True
 
     
-
-
-
-
 # wave 6 method 1
     def get_by_category(self, category):
         result = []
