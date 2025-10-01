@@ -1,4 +1,5 @@
 from uuid import uuid4
+
 #import swap_meet.vendor
 
 #wave 2
@@ -10,21 +11,6 @@ class Item:
 
     def get_category(self):
         return "Item" #returnig class as a string
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
 
 
 #wave 3 

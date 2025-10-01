@@ -1,3 +1,5 @@
+from .item import Item
+
 # wave 1
 class Vendor:
     def __init__(self, inventory = None):
@@ -33,3 +35,43 @@ class Vendor:
         other_vendor.inventory.append(my_item)
 
         return True   
+    
+
+
+
+
+# wave 6 method 1
+    def get_by_category(self, category):
+        result = []
+        for item in self.inventory:
+            if item.get_category() == category:
+                result.append(item)
+        
+        return result
+    
+
+# wave 6 method 2
+    def get_best_by_category(self, category):
+        highest_score = -1
+        highest_item = None
+
+        select_by_category = self.get_by_category(category)
+        for item in select_by_category:
+            if item.condition > highest_score:
+                highest_score = item.condition
+                highest_item = item
+
+        return highest_item
+
+
+# wave 6 method 3
+    def swap_best_by_category(self, other_vendor, my_priority, their_priority):
+        if not self.get_best_by_category(their_priority)  or  not other_vendor.get_best_by_category(my_priority) :
+            return False
+        
+        other_vendor_best_item = other_vendor.get_best_by_category(my_priority)
+        vendor_best_item = self.get_best_by_category(their_priority)
+        # swap
+        self.swap_items(other_vendor,vendor_best_item, other_vendor_best_item)
+
+        return True
