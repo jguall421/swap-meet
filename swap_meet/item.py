@@ -1,5 +1,5 @@
 from uuid import uuid4
-#import swap_meet.vendor
+
 
 CONDITION_DESCRIPTION = { 0: "heavily used", 1: "used", 2: "fair", 3: "good", 4: "like new", 5: "mint"}
 #wave 2
