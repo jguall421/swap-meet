@@ -1,3 +1,5 @@
+from .item import Item
+
 # wave 1
 class Vendor:
     def __init__(self, inventory = None):
@@ -34,8 +36,8 @@ class Vendor:
 
         return True   
     
-#wave 4
 
+#wave 4
     def swap_first_item(self, other_vendor):
         if not self.inventory or not other_vendor.inventory:
             return False

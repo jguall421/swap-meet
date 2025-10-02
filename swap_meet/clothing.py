@@ -1,5 +1,6 @@
 from uuid import uuid4
 from swap_meet.item import Item
+
 class Clothing(Item):
     def __init__(self, id = None, fabric = None, condition = 0):
         super().__init__(id = id, condition = condition)
